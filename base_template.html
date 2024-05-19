@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../path/to/favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>{{ title }}</h1>
+        <a href="../index.html">Back to Home</a>
+    </header>
+    <main>
+        <img src="{{ cover_image }}" alt="Cover Image">
+        <div class="content">
+            <div class="blog-title-date">
+                <h2>{{ title }}</h2>
+                <p class="date">{{ timestamp }}</p> 
+                <p>Story Idea by {{ story_idea_by }}.</p>
+            </div>
+            {{ content | safe }}
+            <p>Generated using the {{ model_name }} model.</p>
+        </div>
+    </main>
+</body>
+</html>
